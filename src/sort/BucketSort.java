@@ -21,5 +21,6 @@ public class BucketSort {
 				System.out.print(i+"\t");
 			}
 		}
+		sc.close();
 	}
 }
