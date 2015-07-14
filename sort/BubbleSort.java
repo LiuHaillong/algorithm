@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 /**
- * bubble sort
+ * 冒泡排序
  */
 public class BubbleSort {
 	public static void main(String[] args) {
