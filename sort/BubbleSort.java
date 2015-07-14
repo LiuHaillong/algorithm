@@ -1,9 +1,7 @@
-package com.liu.test;
-
 import java.util.Scanner;
 
 /**
- * ц╟ещеепР
+ * bubble sort
  */
 public class BubbleSort {
 	public static void main(String[] args) {
