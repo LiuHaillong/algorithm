@@ -26,10 +26,14 @@ void quicksort(int left,int right){
 	//基准数交换
 	a[left] = a[i];
 	a[i] = temp;
-	 
+	
+//	for(i=0;i<n;i++){
+//		printf("%d ",a[i]);
+//	}
+//	printf("\n");
 	quicksort(left,i-1);
 	quicksort(i+1,right);
-	
+	return ;
 }
 
 int main(){
