@@ -1,4 +1,4 @@
-//宽度优先搜索(BFS) !!
+//宽度优先搜索(BFS) !!!
 #include<stdio.h>
 struct note{
 	int x;//x坐标 
