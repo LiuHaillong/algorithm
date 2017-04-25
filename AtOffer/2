@@ -1,0 +1,22 @@
+/**
+ * 请实现一个函数，将一个字符串中的空格替换成“%20”。例如，当字符串为We Are Happy.则经过替换之后的字符串为We%20Are%20Happy。
+ */
+public class Solution {
+    public String replaceSpace(StringBuffer str) {
+        //use java string api
+        //return str.toString().replace(" ","%20");
+
+        //or
+        String sti = str.toString();
+        char[] strChar = sti.toCharArray();
+        StringBuffer out = new StringBuffer();
+        for(int i = 0; i < strChar.length;i++) {
+            if(strChar[i]==' ') {
+                out.append("%20");
+                continue;
+            }
+            out.append(strChar[i]);
+        }
+        return out.toString();
+    }
+}
