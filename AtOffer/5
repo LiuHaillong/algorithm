@@ -1,0 +1,27 @@
+import java.util.Stack;
+
+public class Solution {
+    Stack<Integer> stack1 = new Stack<Integer>();
+    Stack<Integer> stack2 = new Stack<Integer>();
+    
+    public void push(int node) {
+        stack1.push(new Integer(node));
+    }
+    
+    public int pop() {
+    	if(stack2.isEmpty()) {
+            while(!stack1.isEmpty()) {
+                stack2.push(stack1.pop());
+            }
+        }
+        return stack2.pop().intValue();
+    }
+}
+
+/**
+ *	队列是先入先出(FIFO),栈是先入后出
+ *	queue=>1,2,3 (入队列顺序是1->2->3)
+ *	为了实现用栈打到队列的pop效果则需要2个栈:
+ *		1.stack1中压栈顺序为1->2->3,当pop时是3->2->1这样的顺序
+ *		2.把1中3->2->1顺序压入stack2,则栈顶元素是1,pop后栈顶是2,再次pop后栈顶就是3,达到了队列的效果
+ */
