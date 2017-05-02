@@ -1,0 +1,36 @@
+/**
+ * @Author HaiLong Liu
+ */
+public class InsertSort {
+
+    public static void insertSort(int[] arr) {
+        if(arr == null || arr.length == 0)
+            return ;
+
+        for(int i = 1; i < arr.length; i++) {
+            int j = i;
+            int target = arr[i];
+
+            while(j > 0 && target < arr[j - 1]) {
+                arr[j] = arr[j - 1];
+                j--;
+            }
+
+            arr[j] = target;
+            print(i,arr);
+        }
+    }
+
+    public static void print(int idx, int[] arr) {
+        System.out.print("idx: " + (idx+1) + ", ");
+        for(int i = 0; i < arr.length; i++)
+            System.out.print(arr[i] + " ");
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+        int[] arr = new int[]{5,3,8,6,4};
+        insertSort(arr);
+    }
+}
+
