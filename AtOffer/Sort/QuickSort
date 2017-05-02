@@ -1,0 +1,53 @@
+/**
+ * @Author HaiLong Liu
+ */
+public class QuickSort {
+    public static int[] arr;
+
+    public static void quickSort(int[] arr, int start, int end) {
+        if(arr == null || arr.length == 0)
+            return ;
+
+        if(start >= end)
+            return ;
+
+        int mid = arr[end];
+        int left = start, right = end - 1;
+        while(left < right) {
+            while(arr[left] <= mid && left < right)
+                left++;
+            while(arr[right] >= mid && left < right)
+                right--;
+            swap(left, right);
+        }
+
+        if(arr[left] >= arr[end])
+            swap(left, end);
+        else
+            left++;
+
+        quickSort(arr, start, left - 1 );
+        quickSort(arr, left + 1, end);
+
+    }
+
+    private static void swap(int x, int y) {
+        int temp = arr[x];
+        arr[x] = arr[y];
+        arr[y] = temp;
+    }
+
+
+    public static void print(int[] arr) {
+        for(int i = 0; i < arr.length; i++)
+            System.out.print(arr[i] + " ");
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+        arr = new int[]{0,1,4,2,3};
+        quickSort(arr, 0, arr.length - 1);
+        print(arr);
+    }
+}
+
