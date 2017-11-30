@@ -1,5 +1,3 @@
-package com.bynear.algorithm.sort;
-
 /**
  * @author HaiLong Liu
  */
