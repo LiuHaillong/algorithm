@@ -1,6 +1,3 @@
-package com.bynear.algorithm.stack;
-
-
 /**
  * @author HaiLong Liu
  */
