@@ -1,5 +1,3 @@
-package com.bynear.algorithm.everyday_algorithm.string;
-
 import java.math.BigDecimal;
 
 /**
